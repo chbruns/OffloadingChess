@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+<CheckBoxPreference
+	android:title="Play White"
+	android:key="playerWhite"
+	android:defaultValue="true">
+</CheckBoxPreference>
+<CheckBoxPreference
+	android:title="Flip Board"
+	android:key="boardFlipped"
+	android:defaultValue="false">
+</CheckBoxPreference>
+<ListPreference
+	android:title="Difficulty"
+	android:key="maxDepth"
+	android:entryValues="@array/difficulty_values"
+	android:entries="@array/difficulty_texts"
+	android:defaultValue="6">
+</ListPreference>
+<ListPreference
+	android:title="Text Size"
+	android:key="fontSize"
+	android:entryValues="@array/font_size_values"
+	android:entries="@array/font_size_texts"
+	android:defaultValue="10">
+</ListPreference>
+    <PreferenceScreen
+        android:key="button_offloadingl_category_key"
+        android:title="@string/offloading_sub_menu"
+        android:persistent="false">
+        <CheckBoxPreference
+            android:title="Force Offloading"
+            android:key="forceOfflaoding"
+            android:defaultValue="false">
+        </CheckBoxPreference>
+        <ListPreference
+            android:title="Offloading Criteria"
+            android:key="offloadingCriteria"
+            android:entryValues="@array/offloading_criteria_values"
+            android:entries="@array/offloading_criteria_texts"
+            android:defaultValue="0">
+        </ListPreference>
+        <EditTextPreference
+            android:title="Offloading Server"
+            android:key="server"
+            android:defaultValue="192.168.1.2:8080">
+        </EditTextPreference>
+    </PreferenceScreen>
+</PreferenceScreen>

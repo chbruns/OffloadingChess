@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">OffloadingChess</string>
+  <string-array name="difficulty_texts">
+    <item>Very Easy</item>
+    <item>Easy</item>
+    <item>Moderate</item>
+    <item>Hard</item>
+  </string-array>
+  <string-array name="difficulty_values">
+    <item>1</item>
+    <item>4</item>
+    <item>6</item>
+    <item>14</item>
+  </string-array>
+  <string-array name="font_size_texts">
+    <item>Small</item>
+    <item>Medium</item>
+    <item>Large</item>
+  </string-array>
+  <string-array name="font_size_values">
+    <item>10</item>
+    <item>12</item>
+    <item>16</item>
+  </string-array>
+  <string name="offloading_sub_menu">Offloading Settings</string>
+    <string-array name="offloading_criteria_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="offloading_criteria_texts">
+        <item>Time Saving</item>
+        <item>Energy Saving</item>
+        <item>Time and Energy Saving</item>
+    </string-array>
+    <string name="thinking_description">Only when there is no Offloading </string>
+  <string name="serverField">Server Stats:</string>
+  <string name="serverAva">Server available:</string>
+  <string name="ping">Ping:</string>
+  <string name="estimations">Estimations:</string>
+  <string name="localTimeEst">Local Time:</string>
+  <string name="serverTimeEst">Server Time:</string>
+  <string name="commTimeEst">Communication Time:</string>
+  <string name="offlTimeEst">Offloading Time (overall):</string>
+  <string name="csr">Computation Speed Relation:</string>
+  <string name="offlStats">Offloading Stats:</string>
+  <string name="offlDone">Offloading Done:</string>
+  <string name="realStats">Observations:</string>
+  <string name="offlTimeReal">Task Execution Time (overall):</string>
+  <string name="lastTask">Last executed Task:</string>
+  <string name="transData">Transfered Data:</string>
+  <string name="transDataMs">Bandwidth:</string>
+  <string name="serverReal">Server Execution Time</string>
+
+</resources>

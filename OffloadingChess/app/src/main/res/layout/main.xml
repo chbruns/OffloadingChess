@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+<view
+	class="fuberlin.offloadingchess.cuckoochess.ChessBoard"
+    android:id="@+id/chessboard"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"/>
+<TextView
+    android:id="@+id/status"
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:includeFontPadding="true"
+    android:typeface="monospace"
+    android:textSize="10dip"/>
+
+
+    <ScrollView
+	android:id="@+id/scrollView"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:layout_weight="1">
+	<!-- <TextView
+    android:id="@+id/moveList"
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:includeFontPadding="true"
+    android:typeface="monospace"
+    android:textSize="10dip"/> -->
+
+        <TableLayout
+            android:id="@+id/table1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TableRow
+                android:id="@+id/tableRow1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/moveList"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="10dip">
+                </TextView>
+
+
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/serverStats"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/serverField"
+                    android:textStyle="bold"
+                    android:textSize="10dip">
+                </TextView>
+
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/serverAva1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/serverAva"
+                    android:textSize="10dip">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/serverAva2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="10dip">
+                </TextView>
+            </TableRow>
+            <TableRow
+                android:id="@+id/tableRow5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/ping1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/ping"
+                    android:textSize="10dip">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/ping2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="10dip">
+                </TextView>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/csr1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/csr"
+                    android:textSize="10dip">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/csr2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="10dip">
+                </TextView>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/cell7"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/estimations"
+                    android:textSize="10dip"
+                    android:textStyle="bold">
+                </TextView>
+
+            </TableRow>
+            <TableRow
+                android:id="@+id/tableRow6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/localTimeEst1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/localTimeEst"
+                    android:textSize="10dip">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/localTimeEst2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="10dip">
+                </TextView>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/serverTimeEst1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/serverTimeEst"
+                    android:textSize="10dip">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/serverTimeEst2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="10dip">
+                </TextView>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/commTimeEst1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/commTimeEst"
+                    android:textSize="10dip">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/commTimeEst2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="10dip">
+                </TextView>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/offlTimeEst"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/offlTimeEst"
+                    android:textSize="10dip">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/offlTimeEst2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="10dip">
+                </TextView>
+            </TableRow>
+
+
+
+
+
+            <TableRow
+                android:id="@+id/tableRow12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/realStats"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/realStats"
+                    android:textSize="10dip"
+                    android:textStyle="bold">
+                </TextView>
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow29"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/serverReal1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/serverReal"
+                    android:textSize="10dip">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/serverReal2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="10dip">
+                </TextView>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/offlTimeReal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/offlTimeReal"
+                    android:textSize="10dip">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/offlTimeReal2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="10dip">
+                </TextView>
+            </TableRow>
+
+
+
+
+            <TableRow
+                android:id="@+id/tableRow11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/offlStats"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/offlStats"
+                    android:textSize="10dip"
+                    android:textStyle="bold">
+                </TextView>
+
+            </TableRow>
+
+            <TableRow
+            android:id="@+id/tableRow14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/offlDone1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/offlDone"
+                android:textSize="10dip">
+            </TextView>
+
+            <TextView
+                android:id="@+id/offlDone2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="10dip">
+            </TextView>
+        </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/lastTask1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/lastTask"
+                    android:textSize="10dip">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/lastTask2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="10dip">
+                </TextView>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/transData1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/transData"
+                    android:textSize="10dip">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/transData2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="10dip">
+                </TextView>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/transDataMS1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/transDataMs"
+                    android:textSize="10dip">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/transDataMs2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="10dip">
+                </TextView>
+            </TableRow>
+
+        </TableLayout>
+
+</ScrollView>
+<TextView
+    android:id="@+id/thinking"
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:includeFontPadding="true"
+    android:typeface="monospace"
+    android:textSize="10dip"/>
+
+</LinearLayout>
